@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Aayush Nagar — Software Engineering Leader</title>
+  <meta name="description" content="Aayush Nagar — Vice President, Software Engineering at JPMorganChase. Building LLM and agentic AI systems for wholesale credit risk. Based in Glasgow, UK." />
+
+  <!-- Open Graph / social preview -->
+  <meta property="og:title" content="Aayush Nagar — Software Engineering Leader" />
+  <meta property="og:description" content="VP, Software Engineering at JPMorganChase — LLM and agentic AI for wholesale credit risk." />
+  <meta property="og:type" content="website" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+
+  <!-- Set theme before paint to avoid a flash -->
+  <script>
+    (function () {
+      var saved = localStorage.getItem("theme");
+      var prefersLight = window.matchMedia("(prefers-color-scheme: light)").matches;
+      var theme = saved || (prefersLight ? "light" : "dark");
+      document.documentElement.setAttribute("data-theme", theme);
+    })();
+  </script>
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <header class="site-header">
+    <a class="brand mono" href="#top">~/aayush</a>
+    <nav class="nav" aria-label="Primary">
+      <a href="#about">about</a>
+      <a href="#experience">experience</a>
+      <a href="#contact">contact</a>
+      <button id="theme-toggle" class="theme-toggle" type="button" aria-label="Toggle colour theme">
+        <span class="theme-icon" aria-hidden="true"></span>
+      </button>
+    </nav>
+  </header>
+
+  <main id="main">
+    <!-- 01 · Hero -->
+    <section id="top" class="hero">
+      <div class="hero-inner">
+        <div class="hero-text">
+          <p class="mono hero-path">~/aayush — glasgow, uk</p>
+          <h1 class="hero-name">Aayush Nagar</h1>
+          <p class="hero-role">Vice President, Software Engineering at JPMorganChase — building LLM and agentic AI systems for wholesale credit risk.</p>
+          <p class="mono hero-tag">// 11+ years building software across banking &amp; financial services</p>
+          <div class="hero-actions">
+            <a class="btn mono" href="#experience">view experience</a>
+            <a class="btn mono" href="mailto:aayush15a@gmail.com">get in touch</a>
+          </div>
+        </div>
+        <img class="hero-photo" src="assets/aayush.jpg" alt="Aayush Nagar in the Scottish Highlands" width="200" height="200" />
+      </div>
+    </section>
+
+    <!-- 02 · About + skills -->
+    <section id="about" class="section">
+      <h2 class="section-title mono"><span class="num">02</span> about</h2>
+      <div class="about-grid">
+        <div class="about-text">
+          <p>
+            I'm a software engineer and engineering leader based in Glasgow, UK,
+            with over a decade in banking and financial services. For the last
+            seven-plus years I've been at JPMorganChase in the Wholesale Credit
+            Risk and Analytics team, where I'm currently a Vice President of
+            Software Engineering.
+          </p>
+          <p>
+            Our team's work has grown from analytics, into machine learning, and now
+            into large language models and agentic AI. Day to day I'm the engineer who
+            connects platforms, models and people — giving data scientists reliable
+            access to models on AWS Bedrock, building GenAI and agentic solutions on
+            top of large-scale data in Databricks, and delivering analytics as BAU.
+          </p>
+          <p>
+            A lot of what I build serves credit and middle-office teams who need to
+            understand the credit-risk world better — turning massive datasets and new
+            AI capabilities into tools people can actually use.
+          </p>
+        </div>
+        <div class="skills">
+          <h3 class="skills-title mono">stack</h3>
+          <ul class="skill-list mono">
+            <li>Java / Spring Boot</li>
+            <li>Python</li>
+            <li>LLMs &amp; agentic AI</li>
+            <li>AWS · Bedrock · EMR</li>
+            <li>Databricks · Spark</li>
+            <li>Kubernetes · Terraform</li>
+            <li>Kafka · microservices</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- 03 · Experience -->
+    <section id="experience" class="section">
+      <h2 class="section-title mono"><span class="num">03</span> experience</h2>
+      <ol class="timeline">
+        <li class="timeline-item">
+          <div class="timeline-meta mono">
+            <span class="timeline-date">2019 — now</span>
+          </div>
+          <div class="timeline-body">
+            <h3 class="timeline-role">Vice President, Software Engineering</h3>
+            <p class="timeline-org">JPMorganChase · Glasgow, UK</p>
+            <p class="timeline-desc">
+              Wholesale Credit Risk and Analytics. I build the engineering that
+              connects platforms, models and users — model access on AWS Bedrock,
+              GenAI and agentic solutions, and large-scale data pipelines in
+              Databricks. Progressed from Associate (2019) to Senior Associate (2022)
+              to Vice President (2025) as the team grew from analytics into machine
+              learning and generative AI.
+            </p>
+          </div>
+        </li>
+
+        <li class="timeline-item">
+          <div class="timeline-meta mono">
+            <span class="timeline-date">2018 — 2019</span>
+          </div>
+          <div class="timeline-body">
+            <h3 class="timeline-role">Senior Software Engineer</h3>
+            <p class="timeline-org">Nihilent Ltd · Pune, India</p>
+            <p class="timeline-desc">
+              Built banking solutions for clients including Nedbank Group and Mobile
+              Financial Services Africa — Java, Apache Kafka, REST/SOAP services and
+              Angular front-ends.
+            </p>
+          </div>
+        </li>
+
+        <li class="timeline-item">
+          <div class="timeline-meta mono">
+            <span class="timeline-date">2015 — 2017</span>
+          </div>
+          <div class="timeline-body">
+            <h3 class="timeline-role">Software Engineer</h3>
+            <p class="timeline-org">HSBC · Pune, India &amp; Chester, UK</p>
+            <p class="timeline-desc">
+              Core banking application development and support across payments,
+              financial ledger and BI — delivering enhancements in Agile and Waterfall,
+              including a stint embedded with the UK core banking front-end team.
+            </p>
+          </div>
+        </li>
+      </ol>
+    </section>
+
+    <!-- 04 · Education -->
+    <section id="education" class="section">
+      <h2 class="section-title mono"><span class="num">04</span> education</h2>
+      <ol class="timeline">
+        <li class="timeline-item">
+          <div class="timeline-meta mono">
+            <span class="timeline-date">2009 — 2013</span>
+          </div>
+          <div class="timeline-body">
+            <h3 class="timeline-role">BTech, Computer Science</h3>
+            <p class="timeline-org">Dr. A.P.J. Abdul Kalam Technical University · India</p>
+          </div>
+        </li>
+      </ol>
+    </section>
+
+    <!-- 05 · Certifications -->
+    <section id="certifications" class="section">
+      <h2 class="section-title mono"><span class="num">05</span> certifications</h2>
+      <ul class="cert-list mono">
+        <li>Machine Learning</li>
+        <li>An Entire MBA in 1 Course</li>
+      </ul>
+    </section>
+  </main>
+
+  <!-- 06 · Contact -->
+  <footer id="contact" class="site-footer">
+    <h2 class="section-title mono"><span class="num">06</span> contact</h2>
+    <p class="footer-line">Open to interesting problems and good conversations.</p>
+    <ul class="links mono">
+      <li><a href="mailto:aayush15a@gmail.com">email</a></li>
+      <li><a href="https://www.linkedin.com/in/aayushnagar/" target="_blank" rel="noopener">linkedin</a></li>
+    </ul>
+    <p class="copyright mono">© <span id="year"></span> Aayush Nagar</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
