@@ -90,6 +90,15 @@ a:hover { text-decoration: underline; }
 }
 .nav a:hover { color: var(--text); text-decoration: none; }
 
+/* On phones the inline text links overflow the header and push the theme
+   toggle off-screen — hide them and let the ⌘K palette handle navigation. */
+@media (max-width: 600px) {
+  .site-header { padding-left: 1.1rem; padding-right: 1.1rem; }
+  .nav a { display: none; }
+  .nav { gap: 0.6rem; }
+  .kbd-hint { font-size: 0.78rem; padding: 6px 10px; }
+}
+
 .theme-toggle {
   display: inline-flex;
   align-items: center;
