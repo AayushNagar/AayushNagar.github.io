@@ -274,6 +274,11 @@ main { width: 100%; }
   font-size: 0.8rem;
   text-align: right;
 }
+/* On phones, drop the source onto its own line under the course name */
+@media (max-width: 640px) {
+  .cert-list li { flex-wrap: wrap; row-gap: 3px; }
+  .cert-src { margin-left: 0; flex-basis: 100%; text-align: left; padding-left: 1.4rem; }
+}
 
 /* ---------- Footer ---------- */
 .site-footer { padding-top: var(--space); padding-bottom: 3rem; }
@@ -367,6 +372,10 @@ main { width: 100%; }
   padding: 0;
 }
 .term-input::placeholder { color: #586069; }
+/* iOS Safari zooms in when a focused input is below 16px — keep it 16 on phones */
+@media (max-width: 640px) {
+  .term-input { font-size: 16px; }
+}
 
 /* ---------- Footer hint ---------- */
 .hint { color: var(--text-muted); font-size: 0.78rem; margin: 1.5rem 0 0; }
