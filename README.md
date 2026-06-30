@@ -7,8 +7,17 @@ Personal website for Aayush Nagar — a single static page (no build step).
 | File | What it is |
 |------|------------|
 | `index.html` | All the content and structure |
-| `styles.css` | Styling + light/dark themes |
-| `script.js` | Theme toggle + footer year |
+| `styles.css` | Styling + light/dark/matrix themes |
+| `script.js` | Theme toggle, interactive terminal, ⌘K palette, matrix easter egg |
+| `favicon.svg` / `.png` / `.ico` | Terminal-mark favicons |
+
+## Geeky features
+
+- **Interactive terminal** in the hero — type `help`, `whoami`, `experience`,
+  `skills`, `theme matrix`, `clear`… (↑/↓ history, Tab to autocomplete).
+- **`⌘K` / `Ctrl-K` command palette** to jump around and switch theme.
+- **Easter eggs**: the Konami code (or `theme matrix`) starts Matrix rain; `Esc` exits.
+- All of it is progressive enhancement — the site works fully with JavaScript off.
 
 ## Preview locally
 
