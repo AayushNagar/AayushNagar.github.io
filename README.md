@@ -19,6 +19,18 @@ Personal website for Aayush Nagar — a single static page (no build step).
 - **Easter eggs**: the Konami code (or `theme matrix`) starts Matrix rain; `Esc` exits.
 - All of it is progressive enhancement — the site works fully with JavaScript off.
 
+## Analytics (GoatCounter)
+
+Privacy-friendly, cookieless — no consent banner needed. To turn it on:
+
+1. Sign up at [goatcounter.com](https://www.goatcounter.com) and pick a code (e.g. `aayush`).
+2. In `index.html`, replace `MYCODE` in the GoatCounter `<script>` with your code.
+3. Push. Stats appear at `https://<code>.goatcounter.com`.
+
+Custom events are already wired in `script.js` (`track()`): terminal commands
+(`terminal-*`), theme switches (`theme-*`), Matrix mode (`matrix-mode`), and
+palette actions (`palette-*`). Delete the GoatCounter `<script>` to disable everything.
+
 ## Preview locally
 
 Just open `index.html` in a browser, or run a tiny server:

@@ -11,6 +11,18 @@
   var reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
   var isMac = /Mac|iPhone|iPad/.test(navigator.platform || navigator.userAgent || "");
 
+  /* ---------- Analytics (GoatCounter custom events; no-op if not loaded) ---------- */
+  function slug(s) {
+    return String(s).toLowerCase().replace(/[^a-z0-9]+/g, "-").replace(/^-|-$/g, "");
+  }
+  function track(path, title) {
+    try {
+      if (window.goatcounter && window.goatcounter.count) {
+        window.goatcounter.count({ path: path, title: title || path, event: true });
+      }
+    } catch (e) { /* analytics must never break the page */ }
+  }
+
   /* ---------- Theme ---------- */
   function setTheme(name) {
     if (name === "matrix") { startMatrix(); return; }
@@ -19,7 +31,9 @@
     localStorage.setItem("theme", name);
   }
   function toggleTheme() {
-    setTheme(root.getAttribute("data-theme") === "dark" ? "light" : "dark");
+    var next = root.getAttribute("data-theme") === "dark" ? "light" : "dark";
+    setTheme(next);
+    track("theme-" + next, "Theme: " + next);
   }
   var themeToggle = document.getElementById("theme-toggle");
   if (themeToggle) themeToggle.addEventListener("click", toggleTheme);
@@ -145,7 +159,7 @@
     var name = parts[0].toLowerCase();
     name = ALIASES[name] || name;
     var fn = COMMANDS[name];
-    if (fn) fn(parts.slice(1));
+    if (fn) { fn(parts.slice(1)); track("terminal-" + name, "Terminal: " + name); }
     else line("command not found: " + esc(parts[0]) + " — type <span class='t-green'>help</span>", "t-err");
   }
 
@@ -224,6 +238,7 @@
   }
   function startMatrix() {
     if (!canvas || !ctx) return;
+    track("matrix-mode", "Matrix mode");
     root.classList.add("matrix-on");
     canvas.hidden = false;
     sizeMatrix();
@@ -291,6 +306,7 @@
     var a = pFiltered[i];
     if (!a) return;
     closePalette();
+    track("palette-" + slug(a.label), "Palette: " + a.label);
     a.run();
   }
   if (overlay && pInput && pList) {
